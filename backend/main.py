@@ -48,6 +48,7 @@ ORIGINS = [
     "http://localhost:3000",
     "http://localhost:5173",
     "http://localhost:5174",
+    FRONTEND_URL,
 ]
 if NGROK_URL:
     ORIGINS.append(NGROK_URL)
