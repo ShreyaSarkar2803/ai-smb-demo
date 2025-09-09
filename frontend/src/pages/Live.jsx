@@ -411,7 +411,7 @@ export default function TestDrive() {
       formData.append("lang", langCodeMap[language]);
       formData.append("session_id", sessionIdRef.current);
 
-      const response = await fetch("https://7068f4ea65bb.ngrok-free.app/chat", {
+      const response = await fetch("https://ai-smb-demo.onrender.com/chat", {
         method: "POST",
         body: formData,
       });
