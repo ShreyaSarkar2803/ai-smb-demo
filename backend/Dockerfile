@@ -24,6 +24,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
     git \
     unzip \
     build-essential \
+    portaudio19-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy your local project code into the container's working directory (/app)
