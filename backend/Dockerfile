@@ -10,7 +10,16 @@ WORKDIR /app
 # - unzip: Required to extract the downloaded Vosk model archives.
 # - build-essential: Often needed for compiling Python packages with C extensions.
 # Clean up apt lists to keep image size down.
-RUN apt-get update && apt-get install -y \
+# Install system dependencies:
+# - ffmpeg: Required by pydub for audio processing.
+# - git: Required for cloning, though wget is used for vosk models.
+# - unzip: Required to extract the downloaded Vosk model archives.
+# - build-essential: Often needed for compiling Python packages with C extensions.
+# DEBIAN_FRONTEND=noninteractive: Prevents interactive prompts during installation.
+# --no-install-recommends: Avoids installing recommended but not strictly required packages,
+#                          which can reduce image size and potential for conflicts.
+# Clean up apt lists to keep image size down.
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     ffmpeg \
     git \
     unzip \
