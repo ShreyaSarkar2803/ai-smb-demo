@@ -1,0 +1,24 @@
+# --- Python Specific ---
+__pycache__/
+*.pyc
+*.pyd
+*.so
+.Python # Virtualenv directory
+venv/   # Python virtual environment directory (common name)
+.venv/  # Another common virtual environment directory name
+
+# --- API Keys and Environment Variables ---
+.env    # IMPORTANT: Never commit local environment variables or API keys in this folder
+*.envrc # direnv local configuration
+
+# --- Vosk Model Files (Local copies) ---
+# We download these in the Dockerfile on Render, so no need to commit local copies.
+# This assumes your 'models' directory is directly inside 'backend/'
+models/
+
+# --- Log Files ---
+*.log
+
+# --- Temp Files ---
+*.tmp
+*.temp
