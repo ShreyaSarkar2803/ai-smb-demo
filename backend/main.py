@@ -48,7 +48,8 @@ ORIGINS = [
     "http://localhost:3000",
     "http://localhost:5173",
     "http://localhost:5174",
-    FRONTEND_URL,
+    FRONTEND_URL, 
+    "https://ai-smb-demo-q1nboxt9z-shreya-sarkars-projects-d1cd4823.vercel.app",
 ]
 #if NGROK_URL:
     #ORIGINS.append(NGROK_URL)
