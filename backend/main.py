@@ -24,7 +24,7 @@ import inflect
 dotenv.load_dotenv()
 ELEVEN_API_KEY = os.getenv("ELEVEN_API_KEY")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-FRONTEND_URL = os.getenv("FRONTEND_URL", "https://ai-smb-demo-f2r8wo1fv-shreya-sarkars-projects-d1cd4823.vercel.app")
+FRONTEND_URL = os.getenv("FRONTEND_URL", "https://ai-smb-demo-f2r8wo1fv-shreya-sarkars-projects-d1cd4823.vercel.app", "ai-smb-demo-f2r8wo1fv-shreya-sarkars-projects-d1cd4823.vercel.app")
 
 if not ELEVEN_API_KEY or not GROQ_API_KEY:
     raise RuntimeError("ELEVEN_API_KEY and GROQ_API_KEY must be set in .env")
@@ -50,6 +50,7 @@ ORIGINS = [
     "http://localhost:5174",
     FRONTEND_URL, 
     "https://ai-smb-demo-f2r8wo1fv-shreya-sarkars-projects-d1cd4823.vercel.app",
+    "ai-smb-demo-f2r8wo1fv-shreya-sarkars-projects-d1cd4823.vercel.app",
 ]
 #if NGROK_URL:
     #ORIGINS.append(NGROK_URL)
