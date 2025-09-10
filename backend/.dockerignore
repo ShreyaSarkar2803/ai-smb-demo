@@ -1,7 +1,0 @@
-.git
-.venv
-__pycache__
-*.pyc
-*.log
-.env
-models/ # Important: We download models during build, so don't copy local ones if present
