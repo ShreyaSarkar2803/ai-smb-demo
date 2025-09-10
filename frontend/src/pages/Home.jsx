@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import the Link component
 
 export default function Home() {
   const [selectedLanguage, setSelectedLanguage] = useState('english');
@@ -62,25 +63,24 @@ export default function Home() {
 
             {/* Main CTA */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <a
-                href="/demo"
+              <Link
+                to="/demo" // Use 'to' prop for React Router
                 className="group px-8 py-4 bg-gradient-to-r from-violet-800 to-indigo-900 text-white rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 hover:scale-[1.02] hover:brightness-110"
               >
                 Guided Demo Experience
                 <span className="ml-2 group-hover:translate-x-1 transition-transform inline-block">→</span>
-              </a>
-              <a
-                href="/live"
+              </Link>
+              <Link
+                to="/live" // Use 'to' prop for React Router
                 className="group px-8 py-4 bg-gradient-to-r from-violet-700 to-indigo-800 text-white rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 hover:scale-[1.02] hover:brightness-110"
               >
                 Hands On Experience
                 <span className="ml-2 group-hover:translate-x-1 transition-transform inline-block">→</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </div>
-
 
       {/* Features Section */}
       <div className="py-20 bg-[#0a0818]/70 backdrop-blur-lg relative">
@@ -130,7 +130,6 @@ export default function Home() {
         </div>
       </div>
 
-
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-violet-800 to-indigo-900 relative">
         <div className="absolute inset-0 bg-gradient-to-br from-violet-950/20 via-transparent to-indigo-950/30 pointer-events-none"></div>
@@ -141,18 +140,18 @@ export default function Home() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="/demo"
+            <Link
+              to="/demo" // Use 'to' prop
               className="px-8 py-4 bg-[#0f0b22] border border-violet-800/50 text-violet-300 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 hover:bg-violet-900/30 hover:scale-[1.02]"
             >
               Guided Demo Experience
-            </a>
-            <a
-              href="/live"
+            </Link>
+            <Link
+              to="/live" // Use 'to' prop
               className="px-8 py-4 bg-gradient-to-r from-violet-700 to-indigo-800 text-white rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 hover:scale-[1.02] hover:brightness-110"
             >
               Hands On Experience
-            </a>
+            </Link>
           </div>
         </div>
       </div>
