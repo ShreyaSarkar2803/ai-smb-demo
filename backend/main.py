@@ -50,8 +50,8 @@ ORIGINS = [
     "http://localhost:5174",
     FRONTEND_URL,
 ]
-if NGROK_URL:
-    ORIGINS.append(NGROK_URL)
+#if NGROK_URL:
+    #ORIGINS.append(NGROK_URL)
 
 app.add_middleware(
     CORSMiddleware,
